@@ -1,0 +1,11 @@
+- hosts:  localhost
+  name:  configuration
+  user: ladyluck
+  become:  yes
+  become_user:  root
+  gather_facts: true
+
+
+  tasks:
+        - name: Install apache setup
+          yum: name=httpd

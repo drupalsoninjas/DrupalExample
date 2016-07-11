@@ -66,5 +66,6 @@ config.vm.synced_folder ".", "/app"
   # documentation for more information about their specific syntax and use.
 config.vm.provision "shell", inline: <<-SHELL
     mkdir -p /app
+    ansible-playbook -c local /app/.drupal.yml
     SHELL
 end
